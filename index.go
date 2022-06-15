@@ -63,7 +63,6 @@ func (sl *mySingleLinkedList) addToTail(name string) {
 	}
 	sl.size++
 }
-
 // fungsi utk search node dimulai dari indeks ke 0
 func (sl *mySingleLinkedList) Search(name string) int {
 	ptr := sl.head
