@@ -19,7 +19,7 @@ func (sl *mySingleLinkedList) checkDuplicate(node node)error{
 	current := sl.head
 	for current.next != nil{
 		if current.next.data == node.data{
-			return errors.New("tidak boleh sama")
+			return errors.New("input can't be the same")
 		}
 		current = current.next
 	}
@@ -63,6 +63,55 @@ func (sl *mySingleLinkedList) addToTail(name string) {
 	}
 	sl.size++
 }
+
+// fungsi utk search node dimulai dari indeks ke 0
+func (sl *mySingleLinkedList) Search(name string) int {
+	ptr := sl.head
+	for i := 0; i < sl.size; i++ {
+		if ptr.data == name {
+			return i
+		}
+		ptr = ptr.next
+	}
+	return -1
+}
+
+// fungsi add after value at given position
+
+func (sl *mySingleLinkedList) Insert(name string, pst int)error{
+	newNode := &node{
+		data: name,
+	}
+	if pst < 0 {
+		err := errors.New("position cant be less than 0")
+		if err != nil{
+			fmt.Println(err.Error())
+			return nil
+		}
+	}
+	if pst == 0 {
+		sl.head = newNode
+		sl.size++
+		return nil
+	}
+	if pst > sl.size{
+		return nil
+	}
+	err := sl.checkDuplicate(*newNode) // error check : input cant be the same
+		if err != nil{
+			fmt.Println(err.Error())
+			return nil
+		}
+	current := sl.GetAt(pst)
+	newNode.next = current
+	prevNode := sl.GetAt(pst-1)
+	prevNode.next = newNode
+	sl.size++
+	
+	return nil
+}
+
+//
 func (sl *mySingleLinkedList) GetAt(pos int) *node{
 	ptr := sl.head
 	if pos < 0 {
@@ -106,14 +155,22 @@ func main() {
 	singleList.addToHead("11")
 	singleList.addToHead("4")
 	singleList.addToHead("12")
+	
 	singleList.addToTail("13")
 	singleList.addToTail("7")
 	singleList.addToTail("70")
-	singleList.DeleteAt(0)
-	singleList.DeleteAt(1)
+	
+
+	// singleList.DeleteAt(0)
+	// singleList.DeleteAt(1)
+
 	// singleList.DeleteAt(2)
 	// singleList.DeleteAt(3)
 	// singleList.DeleteAt(4)
+	singleList.Insert("15",2)
+	singleList.Insert("16",1)
+	singleList.Insert("19",-1)
 	singleList.iterateList()
 	fmt.Println(singleList.size)
+	fmt.Printf("Position of  value '13' is : %v\n",singleList.Search("13"))
 }
