@@ -52,6 +52,7 @@ func (sl *mySingleLinkedList) Insert(name string, pst int)error{
 	
 	return nil
 }
+```
 
 Output Program : 
 Search Node
