@@ -1,4 +1,4 @@
-#GOLANG LinkedList
+# GOLANG LinkedList
 
 Pada projek ini kita akan menggunakan linkedlist dengan fitur tambahan yaitu : search node dan add after value
 
@@ -58,4 +58,4 @@ Search Node
 ![Output](https://github.com/niqmarozalia/testing-linkedlist/blob/search-node/searchnode.png)
 
 Add after Value :
-![Output](https://github.com/niqmarozalia/testing-linkedlist/blob/search-node/searchnode.png)
+![Output](https://github.com/niqmarozalia/testing-linkedlist/blob/add-after-valuee/addaftervalue.png)
