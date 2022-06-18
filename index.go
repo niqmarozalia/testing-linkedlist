@@ -127,6 +127,7 @@ func main() {
 	// singleList.DeleteAt(3)
 	// singleList.DeleteAt(4)
 	singleList.iterateList()
-	fmt.Println(singleList.size)
+	fmt.Printf("Size : %v\n",singleList.size)
 	fmt.Printf("Position of  value '13' is : %v\n",singleList.Search("13"))
+	fmt.Printf("Position of  value '70' is : %v\n",singleList.Search("70"))
 }
