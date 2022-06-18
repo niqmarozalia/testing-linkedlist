@@ -18,5 +18,6 @@ func (sl *mySingleLinkedList) Search(name string) int {
 
 
 Output Program : 
+![Output](https://github.com/niqmarozalia/testing-linkedlist/blob/search-node/searchnode.png)
 
 
