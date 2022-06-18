@@ -52,4 +52,10 @@ func (sl *mySingleLinkedList) Insert(name string, pst int)error{
 	
 	return nil
 }
-```
+
+Output Program : 
+Search Node
+![Output](https://github.com/niqmarozalia/testing-linkedlist/blob/search-node/searchnode.png)
+
+Add after Value :
+![Output](https://github.com/niqmarozalia/testing-linkedlist/blob/search-node/searchnode.png)
