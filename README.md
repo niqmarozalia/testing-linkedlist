@@ -40,4 +40,5 @@ func (sl *mySingleLinkedList) Insert(name string, pst int)error{
 ```
 
 Contoh output program :
+![Output add after value](https://github.com/niqmarozalia/testing-linkedlist/blob/add-after-valuee/addaftervalue.png)
 
